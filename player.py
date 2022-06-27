@@ -3,9 +3,9 @@
 class Player:
 
     def __init__(self):
-        self.gestures = str["rock", "paper", "scissors", "lizard", "spock"]
+        self.gestures = str["Rock", "Paper", "Scissors", "Lizard", "Spock"]
         self.chosen_gesture()
-        self.win = 0
-        
+        self.win_count = 0
+
 
 
