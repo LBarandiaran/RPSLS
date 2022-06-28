@@ -1,3 +1,4 @@
+from readline import replace_history_item
 from ai import AI
 from human import Human
 from time import sleep
@@ -12,6 +13,7 @@ class Game:
         self.game_format()
         self.battle_phase()
         self.display_winner()
+        self.replay()
 
     def display_welcome(self):
         print()
@@ -69,7 +71,16 @@ class Game:
         pass
 
     def display_winner(self):
-        pass
+        if self.player_one.score == 2:
+            print("Player One is the winner!")
+        elif self.player_two.score == 2:
+            print("Player Two is the winner!")
+
+
+
+
+        
+
 
         
 
