@@ -1,4 +1,6 @@
 from readline import replace_history_item
+
+from pip import main
 from ai import AI
 from human import Human
 from time import sleep
@@ -52,18 +54,19 @@ class Game:
     def game_format(self):
         self.game_format = int(input("How many players? 1, 2, or 3 for an all AI battle"))
         if self.game_format == 1:
-            self.player_one = "Player One"
-            self.player_two = "AI"          
+            self.player_one = Human()
+            self.player_two = AI()         
 
         elif self.game_format == 2:
-            self.player_one = "Player One"
-            self.player_two = "Player Two"
+            self.player_one = Human()
+            self.player_two = Human()
 
         elif self.game_format == 3:
-            self.player_one = "AI One"
-            self.player_two = "AI Two"
+            self.player_one = AI()
+            self.player_two = AI()
 
         else print("Please enter a number as instructed")
+
 
     
 
@@ -76,7 +79,13 @@ class Game:
         elif self.player_two.score == 2:
             print("Player Two is the winner!")
 
-
+    def replay(self, replay):
+        self.replay = input("Would you like to play again? y or n")
+        if self.replay == "y":
+            ## I'm not sure what the command would be to restart from the beginning again ##
+        elif self.replay == "n":
+            ## I'm not sure what the command would be to restart from the beginning again ##
+        else print("Please enter y or n to continue")
 
 
         
