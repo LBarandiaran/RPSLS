@@ -65,11 +65,13 @@ class Game:
             self.player_one = AI()
             self.player_two = AI()
 
-        else print("Please enter a number as instructed")
+        else:
+             print("Please enter a number as instructed")
 
 
     
-
+## much like the robots vs dinos project, this battle/game phase is the trickiest for me ##
+## I'm having a harder time finding the structure needed for this part **
     def battle_phase(self):
         pass
 
@@ -85,7 +87,8 @@ class Game:
             ## I'm not sure what the command would be to restart from the beginning again ##
         elif self.replay == "n":
             ## I'm not sure what the command would be to restart from the beginning again ##
-        else print("Please enter y or n to continue")
+        else:
+             print("Please enter y or n to continue")
 
 
         
